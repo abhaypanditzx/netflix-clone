@@ -1,5 +1,5 @@
 import React from "react";
-import  {Data}  from "./Data";
+import  {reasonsToJoinData}  from "./Data.jsx";
 const ReasonsToJoin = () => {
 
 
@@ -11,7 +11,7 @@ const ReasonsToJoin = () => {
         </h1>
         <div className="flex items-center justify-center gap-y-4 lg:gap-x-4 flex-wrap ">
             {
-                Data.map((item,index)=>(
+                reasonsToJoinData.map((item,index)=>(
                     <div key={index} className=" rounded-xl lg:h-80 w-full h-60 sm:h-50   lg:w-55 text-start gradient-blue-to-purple justify-between   flex  flex-col ">
                    <div className="p-4">
                        <h3 className="text-xl text-white py-2  font-bold">{item.title}</h3>

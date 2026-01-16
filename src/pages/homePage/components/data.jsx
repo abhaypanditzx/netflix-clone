@@ -1,5 +1,5 @@
 import React from "react";
-export const Data = [
+export const reasonsToJoinData = [
   {
     title: "Enjoy on your TV",
     description:
