@@ -9,13 +9,14 @@ const NavBar = () => {
   const isAuthPage =  location.pathname.includes('/auth');
 
   return (
-    <nav className={` ${ !isAuthPage ?'' : 'border-white/20 border-b-[0.2px] ' } bg-transparent w-full  absolute z-10 `}>
+    <nav className={` ${ !isAuthPage ?'' : 'border-white/20 border-b-[0.2px] '} bg-transparent w-full  absolute z-10 `}>
       <div className="flex    gap-10 flex-row items-center  justify-around">
-        <img className="h-20 " src={logo} alt="logo" />
+        <img className="h-20 relative " src={logo} alt="logo" />
+<div>
 
              {
-         !isAuthPage &&
-        <div className="flex gap-2">
+               !isAuthPage &&
+               <div className="flex gap-2">
           {/* language selection  */}
           <div className="flex flex-row items-center justify-between w-20 relative sm:w-32 bg-gray-900 p-2  gap-2">
             <HiLanguage className="text-white text-sm" />
@@ -24,7 +25,7 @@ const NavBar = () => {
               name="language"
               className="bg-gray-900 sm:hidden block outline-none   border-none  left-[50%] w-full text-center translate-x-[-50%]  text-white px-1 py-1 absolute"
               id="language"
-            >
+              >
               <option className="text-gray-900 visible" value="english">
                 EN
               </option>
@@ -36,7 +37,7 @@ const NavBar = () => {
               name="language"
               className="bg-gray-900 sm:block hidden outline-none aria-hidden:  border-none pr-5 left-[50%] w-full text-center translate-x-[-50%]  text-white px-3 py-1 absolute"
               id="language"
-            >
+              >
               <option className="text-gray-900 visible" value="english">
                 {" "}
                 English{" "}
@@ -55,6 +56,7 @@ const NavBar = () => {
             </Link>
         </div>
            }
+           </div>
       </div>
     </nav>
   );
