@@ -1,6 +1,7 @@
 import React from 'react'
 import background from "../../../assets/bg.jpg";
 import { GoChevronRight } from "react-icons/go";
+import {Link} from "react-router-dom";
 const HeroSection = () => {
   return (
     <div>
@@ -25,10 +26,12 @@ const HeroSection = () => {
                   className="outline-white border h-12 sm:h-15  rounded-[5px]  py-0 align-text-bottom px-2 bg-black/20 border-gray-400 placeholder:px-5  w-75 md:w-95 focus-within:outline-red text-gray-100  "
                   placeholder="Email address"
                 />
-                <button className="text-white bg-red-600  rounded-md px-4 h-12 sm:h-15  flex justify-around items-center text-xl   sm:w-50 w-40 md:text-2xl font-semibold">
+                <Link to='/auth'>
+                <button className="text-white bg-red-600  cursor-pointer hover:bg-red-700 duration-150  rounded-md px-4 h-12 sm:h-15  flex justify-around items-center text-xl   sm:w-50 w-40 md:text-2xl font-semibold">
                   <span>Get Started </span>
                   <GoChevronRight />
                 </button>
+                </Link>
               </div>
             </div>
           </div>

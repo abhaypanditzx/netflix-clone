@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { questionData } from "./data";
+import { questionData } from "./Data";
 import { FiPlus } from "react-icons/fi";
 const FrequentlyAskedQuestions = () => {
   const [activeIndex, setActiveIndex] = useState(null);

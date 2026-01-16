@@ -1,5 +1,5 @@
 import React from "react";
-import { Data } from "./data.jsx";
+import { Data } from "./Data.jsx";
 const ReasonsToJoin = () => {
 
 

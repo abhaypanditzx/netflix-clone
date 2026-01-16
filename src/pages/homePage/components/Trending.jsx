@@ -7,7 +7,7 @@ const Trending = () => {
     const getTrending = async () => {
       try {
         const response = await axiosInstance.get("/trending/movie/day");
-        console.log(response.data.results);
+       
         setTrending(response.data.results);
       } catch (err) {
         console.log(err);

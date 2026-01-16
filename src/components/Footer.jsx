@@ -1,13 +1,20 @@
 import React from "react";
 import { GoChevronRight } from "react-icons/go";
 import { HiLanguage } from "react-icons/hi2";
+import { useLocation } from "react-router-dom";
 import { TbTriangleInvertedFilled } from "react-icons/tb";
-
 const Footer = () => {
+
+  const location  =  useLocation();
+  const isAuthPage = location.pathname.includes('/auth');
+
   return (
     <footer>
-  
-      <div className="flex flex-col justify-center py-4 px-2">
+
+
+ {
+  !isAuthPage &&
+       <div className="flex flex-col justify-center py-4 px-2">
         <p className="text-white  text-center text-base sm:text-xl ">
           Ready to watch? Enter your email to create or restart your membership.
         </p>
@@ -23,8 +30,11 @@ const Footer = () => {
           </button>
         </div>
       </div>
+ }
       <div className="px-6 bg-black text-[#ffffffb3]  text-sm flex flex-col gap-10  sm:px-10 ">
-        <div className="py-2">quesitons? call <span className="underline">000-800-919-1743</span></div>
+        <div className="py-2">
+          quesitons? call <span className="underline">000-800-919-1743</span>
+        </div>
 
         <ul className=" capitalize grid grid-cols-1 underline text-sm sm:text-lg  sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-y-3 gap-x-5 pb-6 ">
           <li>
@@ -111,12 +121,10 @@ const Footer = () => {
             bot. <span className="underline text-blue-500">learn more</span>
           </p>
 
-                                  <button className="text-white bg-red-600 no-underline rounded-md w-[90%]  py-1 flex justify-around items-center text-xl   sm:w-50  md:text-2xl font-semibold">
-                                    Get Started 
-                                  </button>
+          <button className="text-white bg-red-600 no-underline rounded-md w-[90%]  py-1 flex justify-around items-center text-xl   sm:w-50  md:text-2xl font-semibold">
+            Get Started
+          </button>
         </div>
-
-
       </div>
     </footer>
   );
