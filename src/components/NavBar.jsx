@@ -9,7 +9,7 @@ const NavBar = () => {
   const isAuthPage =  location.pathname.includes('/auth');
 
   return (
-    <nav className=" border-b-[0.2px] border-white/20 bg-transparent w-full  absolute z-10 ">
+    <nav className={` border-b-[0.2px] ${ !isAuthPage &&  'border-white/20' } bg-transparent w-full  absolute z-10 `}>
       <div className="flex    gap-10 flex-row items-center  justify-around">
         <img className="h-20 " src={logo} alt="logo" />
 
